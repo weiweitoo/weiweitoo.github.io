@@ -159,7 +159,7 @@ function indexReady(){
 }
 
 function projectReady(){
-	$("html, body").animate({ scrollLeft: 0 });
+	$("html, body").animate({ scrollTop: 0 });
 	$('.item-title').css('opacity',1);
 	setTimeout(function(){
 		$('.item-content').css('opacity',1);
@@ -446,5 +446,4 @@ $(function(){
 ////////////////////////////////
 $(function(){
 	$(window).on('scroll',onscroll);
-
 });
