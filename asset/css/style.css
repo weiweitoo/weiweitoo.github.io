@@ -264,7 +264,7 @@ if not then top right*/
       .slide .slide-content .item .item-content {
         font-size: 16px; }
         .slide .slide-content .item .item-content > span {
-          font-size: 12px; }
+          font-size: 10px; }
       .slide .slide-content .item #btn-project {
         color: white;
         font-size: 16px; }
@@ -316,7 +316,7 @@ if not then top right*/
   .slide .slide-content .item .item-content {
     font-size: 22px; }
     .slide .slide-content .item .item-content > span {
-      font-size: 18px; }
+      font-size: 16px; }
   .slide .slide-content .item #btn-project {
     font-size: 22px; } }
 @media only screen and (min-width: 768px) {
@@ -327,7 +327,7 @@ if not then top right*/
   .slide .slide-content .item .item-content {
     font-size: 28px; }
     .slide .slide-content .item .item-content > span {
-      font-size: 24px; }
+      font-size: 22px; }
   .slide .slide-content .item #btn-project {
     font-size: 28px; } }
 /* Navigation Arrow*/
@@ -488,9 +488,6 @@ if not then top right*/
           -ms-transition: all 1s ease-out;
           -o-transition: all 1s ease-out;
           transition: all 1s ease-out; }
-
-#project-1 {
-  opacity: 1; }
 
 #particles-js {
   position: absolute;
