@@ -298,60 +298,62 @@ function preloaderAnimation(func){
 	$after = $('.preloader .after');
 	$before = $('.preloader .before');
 
-	setTimeout(function(){
-		$preloader.css({
-			'border-left' : "150px solid rgba(255,255,255,0)",
-			'border-right' : "150px solid rgba(0,0,0,0)",
-			'box-shadow' : "none"
-		});
+	window.onload = function(){
 		setTimeout(function(){
-			$after.css('opacity','0');
-			$before.css('background','white');
-
+			$preloader.css({
+				'border-left' : "150px solid rgba(255,255,255,0)",
+				'border-right' : "150px solid rgba(0,0,0,0)",
+				'box-shadow' : "none"
+			});
 			setTimeout(function(){
-				$before.css({
-					'border' : 'none',
-					'width' : '80px',
-					'height' : '80px'
-				});
+				$after.css('opacity','0');
+				$before.css('background','white');
+
 				setTimeout(function(){
-					$preloader.css("animation-play-state",'paused');
 					$before.css({
-						"top" : '50%',
-						"left" : '50%',
-						"transform" : 'translate(-50%,-50%)'
+						'border' : 'none',
+						'width' : '80px',
+						'height' : '80px'
 					});
 					setTimeout(function(){
+						$preloader.css("animation-play-state",'paused');
 						$before.css({
-							'width' : '200px',
-							'border-radius' : '8%',
-						});
-						$preloader.css({
-							"animation" : 'none',
+							"top" : '50%',
+							"left" : '50%',
+							"transform" : 'translate(-50%,-50%)'
 						});
 						setTimeout(function(){
-							$before.find('div').text("Fragon? No?");
+							$before.css({
+								'width' : '200px',
+								'border-radius' : '8%',
+							});
+							$preloader.css({
+								"animation" : 'none',
+							});
 							setTimeout(function(){
-								$before.css({
-									"width" : "0"
-								});
+								$before.find('div').text("Fragon? No?");
 								setTimeout(function(){
-									$("#main-wrapper").css({
-										'display' : "inherit"
+									$before.css({
+										"width" : "0"
 									});
-									$(".preloader-wrapper").css("display","none");
 									setTimeout(function(){
-										$('#main-wrapper').css("opacity",'1');
-										func();
-									},800);
-								},1000);
-							},1200)
-						},600);
-					},1000);
-				},500);
+										$("#main-wrapper").css({
+											'display' : "inherit"
+										});
+										$(".preloader-wrapper").css("display","none");
+										setTimeout(function(){
+											$('#main-wrapper').css("opacity",'1');
+											func();
+										},800);
+									},1000);
+								},1200)
+							},600);
+						},1000);
+					},500);
+				},1000);
 			},1000);
-		},1000);
-	},1500);
+		},1500);
+	}
 }
 
 function onscroll(){
