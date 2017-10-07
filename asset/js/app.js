@@ -331,7 +331,7 @@ function preloaderAnimation(func){
 						});
 						setTimeout(function(){
 							$before.find('div').text("Fragon? No?");
-							setTimeout(function(){
+							window.onload = function(){
 								$before.css({
 									"width" : "0"
 								});
@@ -345,7 +345,7 @@ function preloaderAnimation(func){
 										func();
 									},800);
 								},1000);
-							},1200)
+							}
 						},600);
 					},1000);
 				},500);
@@ -441,10 +441,6 @@ $(function(){
 		////////////////////////////////
 		$(document).ready(preloaderAnimation(projectReady));
 	}
-
-	$(window).on('load',function(){
-		console.log(23);
-	});
 });
 
 /////////////////////////////////
