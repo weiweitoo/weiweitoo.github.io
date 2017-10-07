@@ -652,12 +652,21 @@ $project-page-height : $num-project * $project-height;
 	0% {transform: rotate(0);}
 	100% {transform: rotate(360deg);}
 }
+@keyframes blink{
+	0% {text-shadow: 0px 0px 0px white;}
+	50% {text-shadow: 0px 0px 20px white;}
+	100% {text-shadow: 0px 0px 0px white;}
+}
 
 .preloader-wrapper{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 	.preloader-text{
 		position: absolute;
@@ -665,7 +674,16 @@ $project-page-height : $num-project * $project-height;
 		left: 50%;
 		bottom: -20%;
 		font-size: 18px;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
+		font-family: 'Rajdhani', sans-serif;
+		letter-spacing: 4px;
+		animation: blink 2s linear infinite;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+		-ms-transition: all 1s linear;
+		-o-transition: all 1s linear;
+		transition: all 1s linear;
+		
 	}
 	.preload{
 		width: 0;

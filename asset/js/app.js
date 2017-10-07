@@ -54,6 +54,8 @@ function previousSlide(){
 function indexReady(){
 	animationScrollSlide(0);
 	ToggleNav(0);
+	//
+	$('.background').play();
 	// Initializing	! important since it use ajax wont auto initializing
 	screenY = 1;
 	////////////////////////////////////
@@ -296,62 +298,60 @@ function preloaderAnimation(func){
 	$after = $('.preloader .after');
 	$before = $('.preloader .before');
 
-	window.onload = function(){
+	setTimeout(function(){
+		$preloader.css({
+			'border-left' : "150px solid rgba(255,255,255,0)",
+			'border-right' : "150px solid rgba(0,0,0,0)",
+			'box-shadow' : "none"
+		});
 		setTimeout(function(){
-			$preloader.css({
-				'border-left' : "150px solid rgba(255,255,255,0)",
-				'border-right' : "150px solid rgba(0,0,0,0)",
-				'box-shadow' : "none"
-			});
-			setTimeout(function(){
-				$after.css('opacity','0');
-				$before.css('background','white');
+			$after.css('opacity','0');
+			$before.css('background','white');
 
+			setTimeout(function(){
+				$before.css({
+					'border' : 'none',
+					'width' : '80px',
+					'height' : '80px'
+				});
 				setTimeout(function(){
+					$preloader.css("animation-play-state",'paused');
 					$before.css({
-						'border' : 'none',
-						'width' : '80px',
-						'height' : '80px'
+						"top" : '50%',
+						"left" : '50%',
+						"transform" : 'translate(-50%,-50%)'
 					});
 					setTimeout(function(){
-						$preloader.css("animation-play-state",'paused');
 						$before.css({
-							"top" : '50%',
-							"left" : '50%',
-							"transform" : 'translate(-50%,-50%)'
+							'width' : '200px',
+							'border-radius' : '8%',
+						});
+						$preloader.css({
+							"animation" : 'none',
 						});
 						setTimeout(function(){
-							$before.css({
-								'width' : '200px',
-								'border-radius' : '8%',
-							});
-							$preloader.css({
-								"animation" : 'none',
-							});
+							$before.find('div').text("Fragon? No?");
 							setTimeout(function(){
-								$before.find('div').text("Fragon? No?");
+								$before.css({
+									"width" : "0"
+								});
 								setTimeout(function(){
-									$before.css({
-										"width" : "0"
+									$("#main-wrapper").css({
+										'display' : "inherit"
 									});
+									$(".preloader-wrapper").css("display","none");
 									setTimeout(function(){
-										$("#main-wrapper").css({
-											'display' : "inherit"
-										});
-										$(".preloader-wrapper").css("display","none");
-										setTimeout(function(){
-											$('#main-wrapper').css("opacity",'1');
-											func();
-										},800);
-									},1000);
-								},1200)
-							},600);
-						},1000);
-					},500);
-				},1000);
+										$('#main-wrapper').css("opacity",'1');
+										func();
+									},800);
+								},1000);
+							},1200)
+						},600);
+					},1000);
+				},500);
 			},1000);
-		},1500);
-	}
+		},1000);
+	},1500000);
 }
 
 function onscroll(){
