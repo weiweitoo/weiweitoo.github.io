@@ -314,41 +314,43 @@ function preloaderAnimation(func){
 					'width' : '80px',
 					'height' : '80px'
 				});
-				setTimeout(function(){
-					$preloader.css("animation-play-state",'paused');
-					$before.css({
-						"top" : '50%',
-						"left" : '50%',
-						"transform" : 'translate(-50%,-50%)'
-					});
+				window.onload = function(){
 					setTimeout(function(){
+						$preloader.css("animation-play-state",'paused');
 						$before.css({
-							'width' : '200px',
-							'border-radius' : '8%',
-						});
-						$preloader.css({
-							"animation" : 'none',
+							"top" : '50%',
+							"left" : '50%',
+							"transform" : 'translate(-50%,-50%)'
 						});
 						setTimeout(function(){
-							$before.find('div').text("Fragon? No?");
-							window.onload = function(){
-								$before.css({
-									"width" : "0"
-								});
+							$before.css({
+								'width' : '200px',
+								'border-radius' : '8%',
+							});
+							$preloader.css({
+								"animation" : 'none',
+							});
+							setTimeout(function(){
+								$before.find('div').text("Fragon? No?");
 								setTimeout(function(){
-									$("#main-wrapper").css({
-										'display' : "inherit"
+									$before.css({
+										"width" : "0"
 									});
-									$(".preloader-wrapper").css("display","none");
 									setTimeout(function(){
-										$('#main-wrapper').css("opacity",'1');
-										func();
-									},800);
-								},1000);
-							}
-						},600);
-					},1000);
-				},500);
+										$("#main-wrapper").css({
+											'display' : "inherit"
+										});
+										$(".preloader-wrapper").css("display","none");
+										setTimeout(function(){
+											$('#main-wrapper').css("opacity",'1');
+											func();
+										},800);
+									},1000);
+								},1200)
+							},600);
+						},1000);
+					},500);
+				}
 			},1000);
 		},1000);
 	},1500);
