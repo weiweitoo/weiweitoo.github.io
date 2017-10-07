@@ -441,6 +441,10 @@ $(function(){
 		////////////////////////////////
 		$(document).ready(preloaderAnimation(projectReady));
 	}
+
+	$(window).on('load',function(){
+		console.log(23);
+	});
 });
 
 /////////////////////////////////
