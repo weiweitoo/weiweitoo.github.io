@@ -659,6 +659,19 @@ $project-page-height : $num-project * $project-height;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	transition: all 1s ease-in-out;
+	.preloader-text{
+		position: absolute;
+		color: white;
+		left: 50%;
+		bottom: -20%;
+		font-size: 18px;
+		transform: translate(-50%,-50%);
+	}
+	.preload{
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
 	.preloader{
 	    transform-origin: center;
 	    width: auto;

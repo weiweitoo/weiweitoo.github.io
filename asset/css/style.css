@@ -526,6 +526,17 @@ if not then top right*/
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 1s ease-in-out; }
+  .preloader-wrapper .preloader-text {
+    position: absolute;
+    color: white;
+    left: 50%;
+    bottom: -20%;
+    font-size: 18px;
+    transform: translate(-50%, -50%); }
+  .preloader-wrapper .preload {
+    width: 0;
+    height: 0;
+    opacity: 0; }
   .preloader-wrapper .preloader {
     transform-origin: center;
     width: auto;
