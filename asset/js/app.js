@@ -54,6 +54,8 @@ function previousSlide(){
 function indexReady(){
 	animationScrollSlide(0);
 	ToggleNav(0);
+	//
+	$('.background').play();
 	// Initializing	! important since it use ajax wont auto initializing
 	screenY = 1;
 	////////////////////////////////////
