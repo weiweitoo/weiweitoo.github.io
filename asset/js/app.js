@@ -442,9 +442,10 @@ $(function(){
 		$(document).ready(preloaderAnimation(projectReady));
 	}
 
-	window.onload = function(){
-		console.log(3);
-	}
+	$(window).on('load',function(){
+		console.log(23);
+	});
+});
 
 /////////////////////////////////
 // Window scroll event
