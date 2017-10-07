@@ -298,23 +298,23 @@ function preloaderAnimation(func){
 	$after = $('.preloader .after');
 	$before = $('.preloader .before');
 
-	setTimeout(function(){
-		$preloader.css({
-			'border-left' : "150px solid rgba(255,255,255,0)",
-			'border-right' : "150px solid rgba(0,0,0,0)",
-			'box-shadow' : "none"
-		});
+	window.onload = function(){
 		setTimeout(function(){
-			$after.css('opacity','0');
-			$before.css('background','white');
-
+			$preloader.css({
+				'border-left' : "150px solid rgba(255,255,255,0)",
+				'border-right' : "150px solid rgba(0,0,0,0)",
+				'box-shadow' : "none"
+			});
 			setTimeout(function(){
-				$before.css({
-					'border' : 'none',
-					'width' : '80px',
-					'height' : '80px'
-				});
-				window.onload = function(){
+				$after.css('opacity','0');
+				$before.css('background','white');
+
+				setTimeout(function(){
+					$before.css({
+						'border' : 'none',
+						'width' : '80px',
+						'height' : '80px'
+					});
 					setTimeout(function(){
 						$preloader.css("animation-play-state",'paused');
 						$before.css({
@@ -350,10 +350,10 @@ function preloaderAnimation(func){
 							},600);
 						},1000);
 					},500);
-				}
+				},1000);
 			},1000);
-		},1000);
-	},1500);
+		},1500);
+	}
 }
 
 function onscroll(){
