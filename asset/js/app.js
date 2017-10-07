@@ -351,7 +351,7 @@ function preloaderAnimation(func){
 				},500);
 			},1000);
 		},1000);
-	},1500000);
+	},1500);
 }
 
 function onscroll(){
