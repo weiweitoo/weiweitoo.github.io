@@ -49,7 +49,8 @@ a {
 body {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: black !important; }
+  background-color: black !important;
+  overflow: hidden; }
 
 ::-webkit-scrollbar {
   width: 0px;

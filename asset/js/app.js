@@ -52,6 +52,7 @@ function previousSlide(){
 }
 
 function indexReady(){
+	$('body').css('overflow','scroll');
 	animationScrollSlide(0);
 	ToggleNav(0);
 	// Initializing	! important since it use ajax wont auto initializing
@@ -159,6 +160,7 @@ function indexReady(){
 }
 
 function projectReady(){
+	$('body').css('overflow','scroll');
 	$("html, body").animate({ scrollTop: 0 });
 	$('.item-title').css('opacity',1);
 	setTimeout(function(){
