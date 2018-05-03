@@ -146,10 +146,10 @@ function indexReady(){
 		console.log(url);
 		// title = $this.attr("data-name");	
 
-		// history.pushState({
-		// 	url : url,
-		// 	title : title
-		// }, title, url);
+		history.pushState({
+			url : url,
+			title : title
+		}, title, url);
 
 		// Page Transition
 		document.title = title;
@@ -157,9 +157,9 @@ function indexReady(){
 		window.setTimeout(function(){
 			$('#main-wrapper').load(url + " #inner-wrapper");
 			$('#main-wrapper').css('opacity','1');
-			window.setTimeout(function(){
-				projectReady();
-			},500);
+			// window.setTimeout(function(){
+			// 	projectReady();
+			// },500);
 		},1000);
 	});
 }
