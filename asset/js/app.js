@@ -157,8 +157,11 @@ function indexReady(){
 		window.setTimeout(function(){
 			$('#main-wrapper').load(url + " #inner-wrapper");
 			$('#main-wrapper').css('opacity','1');
-			projectReady();
+			window.setTimeout(function(){
+				projectReady();
+			},500);
 		},1000);
+
 	});
 }
 
