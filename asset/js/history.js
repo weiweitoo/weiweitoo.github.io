@@ -1,29 +1,19 @@
-// For history.api
-// $(document).ready(function(){	
-// 	var url = '';
-// 	var title = "Too";
-// 	history.pushState({
-// 		url : url ,
-// 		title : title
-// 	}, title, url );
-// });
-
 $(function () {
-	// Check for popstate event
-	$(window).on('popstate', function (e) {
-		var state = e.originalEvent.state;
+	// Check for popstate event, trigged when browser back and forward button click
+	window.addEventListener("popstate", function(e) {
+		var state = location.pathname;
 		if (state !== null) {
-			if(state.url !== currentPath)
+			if(state !== currentPath)
 			{
-				document.title = state.title;
+				// document.title = state.title;
 				$('#main-wrapper').css('opacity','0');
 				window.setTimeout(function(){
-					$('#main-wrapper').load(state.url + " #inner-wrapper");
+					$('#main-wrapper').load(state + " #inner-wrapper");
 					$('#main-wrapper').css('opacity','1');
 				},1000);
 			}
 		} else {
-			document.title = state;
+			// document.title = state;
 			console.log("Empty state - Error to navigate");
 		}
 	});

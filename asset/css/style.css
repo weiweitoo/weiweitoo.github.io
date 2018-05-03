@@ -257,8 +257,8 @@ if not then top right*/
       z-index: 2;
       font-family: 'Rajdhani', sans-serif;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
+      left: 40%;
+      transform: translate(-40%, -50%); }
       .slide .slide-content .item .item-title {
         font-family: 'Exo', sans-serif;
         font-size: 20px; }
@@ -267,8 +267,15 @@ if not then top right*/
         .slide .slide-content .item .item-content > span {
           font-size: 10px; }
       .slide .slide-content .item #btn-project {
+        -webkit-transition: all 0.6s ease-out;
+        -moz-transition: all 0.6s ease-out;
+        -ms-transition: all 0.6s ease-out;
+        -o-transition: all 0.6s ease-out;
+        transition: all 0.6s ease-out;
         color: white;
         font-size: 16px; }
+        .slide .slide-content .item #btn-project:hover {
+          color: #6495ed; }
         .slide .slide-content .item #btn-project:focus {
           outline: none; }
         .slide .slide-content .item #btn-project .oscillate {
@@ -374,7 +381,7 @@ if not then top right*/
   -o-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
   .effect1:hover {
-    padding: 12px; }
+    padding: 12px 20px; }
     .effect1:hover:after {
       -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
@@ -385,8 +392,7 @@ if not then top right*/
       bottom: 0;
       left: 0;
       right: 0;
-      border: 2px solid rgba(0, 241, 255, 0.4);
-      box-shadow: 0 0 20px 2px #00f1ff; }
+      border: 2px solid rgba(0, 241, 255, 0.4); }
   .effect1:focus {
     outline: none; }
   .effect1:before {

@@ -330,7 +330,7 @@ function preloaderAnimation(func){
 						setTimeout(function(){
 							$before.css({
 								'width' : '200px',
-								'border-radius' : '8%',
+								'border-radius' : '0',
 							});
 							$preloader.css({
 								"animation" : 'none',

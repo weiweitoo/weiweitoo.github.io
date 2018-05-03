@@ -300,9 +300,16 @@ if not then top right*/
 				}
 			}
 			#btn-project{
+				-webkit-transition: all 0.6s ease-out;
+				-moz-transition: all 0.6s ease-out;
+				-ms-transition: all 0.6s ease-out;
+				-o-transition: all 0.6s ease-out;
+				transition: all 0.6s ease-out;
 				color: white;
 				font-size: 16px;
-
+				&:hover{
+					color : #6495ed;
+				}
 				&:focus{
 					outline : none;
 				}
@@ -451,7 +458,7 @@ if not then top right*/
 	-o-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 	&:hover{
-		padding : 12px;
+		padding : 12px 20px;
 		&:after{
 			-webkit-transform: scale3d(1, 1, 1);
 			transform: scale3d(1, 1, 1);
@@ -464,7 +471,7 @@ if not then top right*/
 			left: 0;
 			right: 0;
 			border: 2px solid rgba(0, 241, 255, 0.4);
-			box-shadow: 0 0 20px 2px #00f1ff;
+			// box-shadow: 0 0 20px 2px #00f1ff;
 		}
 	}
 	&:focus{
