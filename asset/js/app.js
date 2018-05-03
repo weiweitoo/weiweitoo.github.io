@@ -156,6 +156,7 @@ function indexReady(){
 		$('#main-wrapper').css('opacity','0');
 		window.setTimeout(function(){
 			$('#main-wrapper').load(url + " #inner-wrapper");
+			projectReady();
 			$('#main-wrapper').css('opacity','1');
 		},1000);
 	});
