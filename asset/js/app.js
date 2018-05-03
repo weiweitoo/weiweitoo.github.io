@@ -165,11 +165,6 @@ function indexReady(){
 function projectReady(){
 	$('body').css('overflow','scroll');
 	$("html, body").animate({ scrollTop: 0 });
-	$('.item-title')[0].css('opacity',1);
-	console.log($('.item-title'));
-	setTimeout(function(){
-		$('.item-content').css('opacity',1);
-	},500);
 
 	//////////////////////////////////
 	// For particle.js
