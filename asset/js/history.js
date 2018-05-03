@@ -1,12 +1,12 @@
 // For history.api
-$(document).ready(function(){	
-	var url = '';
-	var title = "Too";
-	history.pushState({
-		url : url ,
-		title : title
-	}, title, url );
-});
+// $(document).ready(function(){	
+// 	var url = '';
+// 	var title = "Too";
+// 	history.pushState({
+// 		url : url ,
+// 		title : title
+// 	}, title, url );
+// });
 
 $(function () {
 	// Check for popstate event

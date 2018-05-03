@@ -140,14 +140,16 @@ function indexReady(){
 	// For button ajax to load project.html
 	///////////////////////////////////////////
 	$("#btn-project").on('click' ,function () {
-		var $this = $(this),
-			url = $this.attr("data-url"),
-			title = $this.attr("data-name");
+		var $this = $(this);
+		var url = $this.attr("href");
+		var title = "haha";
+		console.log(url);
+		// title = $this.attr("data-name");	
 
-		history.pushState({
-			url : url,
-			title : title
-		}, title, url);
+		// history.pushState({
+		// 	url : url,
+		// 	title : title
+		// }, title, url);
 
 		// Page Transition
 		document.title = title;
