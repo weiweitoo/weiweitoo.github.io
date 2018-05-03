@@ -257,8 +257,8 @@ if not then top right*/
       z-index: 2;
       font-family: 'Rajdhani', sans-serif;
       top: 50%;
-      left: 40%;
-      transform: translate(-40%, -50%); }
+      left: 50%;
+      transform: translate(-50%, -50%); }
       .slide .slide-content .item .item-title {
         font-family: 'Exo', sans-serif;
         font-size: 20px; }
