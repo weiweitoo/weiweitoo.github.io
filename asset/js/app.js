@@ -161,13 +161,16 @@ function indexReady(){
 				projectReady();
 			},500);
 		},1000);
-
 	});
 }
 
 function projectReady(){
 	$('body').css('overflow','scroll');
 	$("html, body").animate({ scrollTop: 0 });
+	$('.item-title').css('opacity',1);
+	setTimeout(function(){
+		$('.item-content').css('opacity',1);
+	},500);
 
 	//////////////////////////////////
 	// For particle.js
