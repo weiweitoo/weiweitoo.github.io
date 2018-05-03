@@ -166,7 +166,7 @@ function projectReady(){
 	$('body').css('overflow','scroll');
 	$("html, body").animate({ scrollTop: 0 });
 	$('.item-title').css('opacity',1);
-	console.log(23);
+	console.log($('.item-title'));
 	setTimeout(function(){
 		$('.item-content').css('opacity',1);
 	},500);
