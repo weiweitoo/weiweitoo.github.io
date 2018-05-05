@@ -48,7 +48,21 @@ a{
 
 /* End of css reseter */
 
+.general-font{
+	font-family: 'Abel', sans-serif;
+}
+.big-title{
+	font-family : 'Rajdhani', sans-serif;
+}
+.title{
+	font-family: 'Exo', sans-serif;
+}
+.small-title{
+	font-family: 'Source Code Pro', monospace;
+}
+
 body{
+	@extends .general-font;
 	min-height : 100vh;
 	min-width : 100vw;
 	background-color : black!important;
@@ -152,7 +166,6 @@ body{
 	    .item-title{
 	    }
 	    .item-content{
-	    	font-family: 'Abel', sans-serif;
 	    }
 	}
 }
@@ -175,7 +188,7 @@ if not then top right*/
     right: 0;
     transform: translateY(-10%);
     font-size: 13px;
-    font-family: 'Source Code Pro', monospace;
+    @extends .small-title;
 
     >ul{
     	text-align: right;
@@ -285,12 +298,11 @@ if not then top right*/
 			position: absolute;
 			color: white;
 			z-index: 2;
-			font-family: 'Rajdhani', sans-serif;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
 			.item-title{
-				font-family: 'Exo', sans-serif;
+				@extends .title;
 				font-size: 20px;
 			}
 			.item-content{
@@ -340,7 +352,7 @@ if not then top right*/
 		    color: white;
 		    z-index: 2;
 		    font-size: 26px;
-		    font-family : 'Rajdhani', sans-serif;
+		    @extends .big-title;
 		    top: 50%;
 		    left: 50%;
 		    transform: translate(-50%,-50%);
@@ -451,7 +463,6 @@ if not then top right*/
 	color: white;
 	padding: 8px;
 	font-size: 14px;
-	font-family: 'Abel', sans-serif;
 	-webkit-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 	-moz-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 	-ms-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -575,7 +586,7 @@ $project-page-height : $num-project * $project-height;
 				left: 50%;
 				transform: translate(-50%,-60%);
 				.item-title{
-					font-family: 'Raleway', sans-serif;
+					@extends .title;
 					font-size: 18px;
 					text-shadow: 0px 0px 2px #a4a4a4;
 					letter-spacing: 2px;
@@ -588,7 +599,6 @@ $project-page-height : $num-project * $project-height;
 					transition: all 1s ease-out;
 				}
 				.item-content{
-					font-family: Abel;
 					font-size: 14px;
 					opacity: 0;
 					-webkit-transition: all 1s ease-out;
@@ -683,7 +693,7 @@ $project-page-height : $num-project * $project-height;
 		bottom: -20%;
 		font-size: 18px;
 		transform: translate(-50%, -50%);
-		font-family: 'Rajdhani', sans-serif;
+		@extends .small-titles;
 		letter-spacing: 4px;
 		animation: blink 2s linear infinite;
 		-webkit-transition: all 1s linear;
@@ -722,7 +732,6 @@ $project-page-height : $num-project * $project-height;
 			transition: all 1s ease-in-out;
 			overflow: hidden;
 			>div{
-				font-family: 'Abel';
 				font-size: 20px;
 				position: absolute;
 				top: 50%;
