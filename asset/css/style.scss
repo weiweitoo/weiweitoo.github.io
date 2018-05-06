@@ -62,7 +62,7 @@ a{
 }
 
 body{
-	@extends .general-font;
+	@extend .general-font;
 	min-height : 100vh;
 	min-width : 100vw;
 	background-color : black!important;
@@ -188,7 +188,7 @@ if not then top right*/
     right: 0;
     transform: translateY(-10%);
     font-size: 13px;
-    @extends .small-title;
+    @extend .small-title;
 
     >ul{
     	text-align: right;
@@ -302,7 +302,7 @@ if not then top right*/
 			left: 50%;
 			transform: translate(-50%,-50%);
 			.item-title{
-				@extends .title;
+				@extend .title;
 				font-size: 20px;
 			}
 			.item-content{
@@ -352,7 +352,7 @@ if not then top right*/
 		    color: white;
 		    z-index: 2;
 		    font-size: 26px;
-		    @extends .big-title;
+		    @extend .big-title;
 		    top: 50%;
 		    left: 50%;
 		    transform: translate(-50%,-50%);
@@ -586,7 +586,7 @@ $project-page-height : $num-project * $project-height;
 				left: 50%;
 				transform: translate(-50%,-60%);
 				.item-title{
-					@extends .title;
+					@extend .title;
 					font-size: 18px;
 					text-shadow: 0px 0px 2px #a4a4a4;
 					letter-spacing: 2px;
@@ -693,7 +693,6 @@ $project-page-height : $num-project * $project-height;
 		bottom: -20%;
 		font-size: 18px;
 		transform: translate(-50%, -50%);
-		@extends .small-titles;
 		letter-spacing: 4px;
 		animation: blink 2s linear infinite;
 		-webkit-transition: all 1s linear;
