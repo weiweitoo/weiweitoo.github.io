@@ -144,14 +144,8 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
-  #slide2 .skybluelayer {
-    background-color: #424c6b;
-    opacity: 0.3;
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 5; }
+  background-size: cover;
+  /*special configuration*/ }
   #slide2 .slide-content {
     top: 65% !important;
     transform: translate(-50%, -35%); }
@@ -268,8 +262,10 @@ if not then top right*/
       left: 50%;
       transform: translate(-50%, -50%); }
       .slide .slide-content .item .item-title {
+        margin: 5px 0;
         font-size: 20px; }
       .slide .slide-content .item .item-content {
+        line-height: 1.15;
         font-size: 16px; }
         .slide .slide-content .item .item-content > span {
           font-size: 10px; }
@@ -321,6 +317,13 @@ if not then top right*/
         -ms-transition: width 0.4s ease-in;
         -o-transition: width 0.4s ease-in;
         transition: width 0.4s ease-in; }
+  .slide .skybluelayer {
+    background-color: #424c6b;
+    opacity: 0.3;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 5; }
 
 @media only screen and (min-width: 600px) {
   .slide .slide-content .tagline {
