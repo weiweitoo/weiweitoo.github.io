@@ -1,3 +1,5 @@
-_site
-.sass-cache
-bourbon
+/*
+/*/
+!/source/
+!/CNAME
+!/README.md
