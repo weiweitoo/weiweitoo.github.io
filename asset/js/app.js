@@ -139,29 +139,29 @@ function indexReady(){
 	//////////////////////////////////////////
 	// For button ajax to load project.html
 	///////////////////////////////////////////
-	$("#btn-project").on('click' ,function () {
-		var $this = $(this);
-		var url = $this.attr("href");
-		var title = "haha";
-		console.log(url);
-		// title = $this.attr("data-name");	
+	// $("#btn-project").on('click' ,function () {
+	// 	var $this = $(this);
+	// 	var url = $this.attr("href");
+	// 	var title = "haha";
+	// 	console.log(url);
+	// 	// title = $this.attr("data-name");	
 
-		history.pushState({
-			url : url,
-			title : title
-		}, title, url);
+	// 	history.pushState({
+	// 		url : url,
+	// 		title : title
+	// 	}, title, url);
 
-		// Page Transition
-		document.title = title;
-		$('#main-wrapper').css('opacity','0');
-		window.setTimeout(function(){
-			$('#main-wrapper').load(url + " #inner-wrapper");
-			$('#main-wrapper').css('opacity','1');
-			// window.setTimeout(function(){
-			// 	projectReady();
-			// },500);
-		},1000);
-	});
+	// 	// Page Transition
+	// 	document.title = title;
+	// 	$('#main-wrapper').css('opacity','0');
+	// 	window.setTimeout(function(){
+	// 		$('#main-wrapper').load(url + " #inner-wrapper");
+	// 		$('#main-wrapper').css('opacity','1');
+	// 		// window.setTimeout(function(){
+	// 		// 	projectReady();
+	// 		// },500);
+	// 	},1000);
+	// });
 }
 
 function projectReady(){
@@ -432,7 +432,7 @@ $(function(){
 	/////////////////////////////////////////
 	// For index.html
 	////////////////////////////////////////
-	if(currentPath == "" || currentPath == "index.html"){
+	if(currentPath == "" || currentPath == "about.html"){
 		/////////////////////////////////////
 		// Document ready
 		/////////////////////////////////////
