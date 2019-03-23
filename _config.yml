@@ -2,7 +2,7 @@
 title: Too
 subtitle: Cyberjaya, Malaysia
 welcome_message: Inspired By Code
-description: FullStack Engineer - Game Engineer
+description: FullStack Engineer - Game Engineer - Data Scientist
 creator: <a href="http://onev.cat">@onevcat</a>
 
 url: "http://hitoo.co"
@@ -45,7 +45,3 @@ social:
     rss: 
     mail: sengweitoo@gmail.com
 
-# Google Analytics
-ga:
-    # id: your_ga_id
-    # host: your_host
