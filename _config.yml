@@ -33,7 +33,7 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: toosengwei
+    disqus: www-hitoo-co
     # duoshuo: 
     
 # Social
