@@ -149,5 +149,5 @@ The brute-force approach will be to generate all subsets of elements of the arra
 **Method 2: Top-Down DP**
 
 
-[recursion_image]: http://xxx/xx "Visualizing Recursion"
-[example_1_table]: http://xxx/xx "Visualization of Reachable Table"
+[recursion_image]: (http://www.hitoo.co/assets/images/post/example_1_table.png) "Visualizing Recursion"
+[example_1_table]: http://www.hitoo.co/assets/images/post/Recursive-Functions-in-c.png "Visualization of Reachable Table"
