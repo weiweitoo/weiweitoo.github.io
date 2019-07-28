@@ -1,5 +1,5 @@
 # Prior-knowlegde - Recursion
-<center>![Visualization of Recursion][recursion_image]</center>
+![Visualization of Recursion][recursion_image]
 <center>*Image Source: GeeksforGeeks*</center>
 
 I bet everyone who reads this are know about recursion. So will just simply go through it as a revision.
@@ -25,19 +25,18 @@ Yes. Definitely.
 
 > "Great power comes with great responsibility" - Uncle Ben
 
-Recursive is just keep placing execution contexts on the top of the stack. It is an accumulated process. Once it reaches a limit, "StackOverflow" will happen. Stack Overflow is when we run out of memory to hold items in the stack.
-
-*python have a default recursive limit - 1000, but you can change it by calling sys.setrecursionlimit(num_of_limit)*
+Recursive is just keep placing execution contexts on the top of the stack. It is an accumulated process. Once it reaches a limit, "StackOverflow" will happen. Stack Overflow is when we run out of memory to hold items in the stack. python have a default recursive limit - 1000, but you can change it by calling sys.setrecursionlimit(num_of_limit)
 
 Other than that, recursive is just much slower and slower. So if you are a game programmer, don't ever use recursion :P
 
-*Additional Knowledge*
+**Additional Knowledge**
 ```
 The reason that why recursive slow
 // TODO
 ```
 
 # Dynamic Programming
+
 Dynamic Programming (from now on abbreviated as DP) is an optimization method for recursion. There is 2 way of doing DP. Top-Down DP and Bottom-Up DP.
 
 ### Example 1: Wedding Shopping
@@ -64,8 +63,7 @@ M = 20, C = 3
 10 from garment id 2
 1 from garment id 2
 
-#### To do it in DP
-**Notation**<br/>
+### To do it in DP
 *shop(money_left, garment_id)* is a notation of buying *garment_id* with *money_left* that you have
 
 **Method 1: Bruce Force**<br/>
@@ -120,7 +118,7 @@ First, we have a boolean matrix can_reach[money_left][garment_id] of size 201 ×
 This means that we can somehow reach this state (money_left = 1) by buying a combination of various garment models. The final answer is M - money_left, or in this case, 20-1 = 19. The answer is "no solution" if there is no cell in the last column that is set to be true.
 
 
-<center>![Visualization of Reachable Table][example_1_table]<center>
+![Visualization of Reachable Table][example_1_table]
 
 
 ### Example 2: Uber Interview Question - Maximum Sum of Non-adjacent Elements
