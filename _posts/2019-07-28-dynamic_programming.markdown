@@ -1,6 +1,6 @@
 # Prior-knowlegde - Recursion
-![Visualization of Recursion][recursion_image]
-*Image Source: GeeksforGeeks*
+<center>![Visualization of Recursion][recursion_image]<center/>
+<center>*Image Source: GeeksforGeeks*<center/>
 
 I bet everyone who reads this are know about recursion. So will just simply go through it as a revision.
 
@@ -80,7 +80,7 @@ Do a complete search. You may do it in this way
 This solution just works! But it is very slow! 
 Let's take a look at a bigger range of input.
 Assume garment_id 0, 1, ... 20. All of them have 20 choices. 
-The time complexity will be 20 x 20 x ... x 20 of total 20 times in the worst case. In the end, it will end up with O(20^20)
+The time complexity will be 20 x 20 x ... x 20 of total 20 times in the worst case. In the end, it will end up with O(20<sup>20</sup>)
 
 This is where we come to method 2, doing it recursively with some optimization.
 
@@ -91,7 +91,7 @@ Memorization is one of the optimization technique for recursion. First, when we 
 This is shown in Complete Search recurrence 3 above: solution for the sub-problem is part of the solution of the original problem.
 
 2. This problem has overlapping sub-problems(Criteria of using Top-Down DP)
-The search space is not as big as 20^20 analyzed in Complete Search discussion above as many sub-problems are overlapping. For instance, we repetitively compute some of the same subproblems. 
+The search space is not as big as 20<sup>20</sup> analyzed in Complete Search discussion above as many sub-problems are overlapping. For instance, we repetitively compute some of the same subproblems. 
 
 Once the 2 criteria are satisfied. We can do it in Top-Down DP!
 
@@ -107,7 +107,7 @@ But how many sub-problems is there for us to compute to get the answer? Assume, 
 (a) If yes, return the value from the DP memo table, O(1).
 (b) If not, compute and then store the computed value in the memo table, for future usage
 
-If it has M states, then it requires at least O(M) memory space. If filling a 'memo' table requires O(k) steps, then the overall time complexity is O(kM). In the example above has M = 201 × 20 = 4020 and k = 20 (as we have to iterate through at most 20 models for each garment_id). Thus the time complexity is 4020×20 = 80400.
+If it has M states, then it requires at least O(M) memory space. If filling a 'memo' table requires O(k) steps, then the overall time complexity is O(kM). In the example above has M = 201 × 20 = 4020 and k = 20 (as we have to iterate through at most 20 models for each garment_id). Thus the time complexity is 4020 × 20 = 80400.
 
 **Method 3: Bottom-Up**<br/>
 I would say this method is one of the amazing power of DP. Step of doing this can be summarized as 
@@ -120,7 +120,7 @@ First, we have a boolean matrix can_reach[money_left][garment_id] of size 201 ×
 This means that we can somehow reach this state (money_left = 1) by buying a combination of various garment models. The final answer is M - money_left, or in this case, 20-1 = 19. The answer is "no solution" if there is no cell in the last column that is set to be true.
 
 
-![Visualization of Reachable Table][example_1_table]
+<center>![Visualization of Reachable Table][example_1_table]<center>
 
 
 Example 2: Uber Interview Question - Maximum Sum of Non-adjacent Elements
