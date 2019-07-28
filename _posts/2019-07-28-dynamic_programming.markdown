@@ -1,6 +1,6 @@
 # Prior-knowlegde - Recursion
-<center>![Visualization of Recursion][recursion_image]<center/>
-<center>*Image Source: GeeksforGeeks*<center/>
+<center>![Visualization of Recursion][recursion_image]</center>
+<center>*Image Source: GeeksforGeeks*</center>
 
 I bet everyone who reads this are know about recursion. So will just simply go through it as a revision.
 
@@ -40,7 +40,7 @@ The reason that why recursive slow
 # Dynamic Programming
 Dynamic Programming (from now on abbreviated as DP) is an optimization method for recursion. There is 2 way of doing DP. Top-Down DP and Bottom-Up DP.
 
-Example 1: Wedding Shopping
+### Example 1: Wedding Shopping
 
 **Problem statement:**<br/>
 Given different models for each garment (e.g. 3 shirts, 2 belts, 4 shoes, ...), buy one model of each garment. As the budget is limited, we cannot spend more money than the budget, but we want to spend the maximum possible. But it is also possible that we cannot buy one model of each garment due to that small amount of budget. 
@@ -64,7 +64,7 @@ M = 20, C = 3
 10 from garment id 2
 1 from garment id 2
 
-## To do it in DP
+#### To do it in DP
 **Notation**<br/>
 *shop(money_left, garment_id)* is a notation of buying *garment_id* with *money_left* that you have
 
@@ -123,7 +123,7 @@ This means that we can somehow reach this state (money_left = 1) by buying a com
 <center>![Visualization of Reachable Table][example_1_table]<center>
 
 
-Example 2: Uber Interview Question - Maximum Sum of Non-adjacent Elements
+### Example 2: Uber Interview Question - Maximum Sum of Non-adjacent Elements
 
 **Problem Statement:**
 Given an array of integers, find the subset of non-adjacent elements with the maximum sum. Calculate the sum of that subset.
