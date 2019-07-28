@@ -1,6 +1,6 @@
 # Prior-knowlegde - Recursion
 ![Visualization of Recursion][recursion_image]
-<center>*Image Source: GeeksforGeeks*</center>
+*<center>Image Source: GeeksforGeeks</center>*
 
 I bet everyone who reads this are know about recursion. So will just simply go through it as a revision.
 
