@@ -1,27 +1,28 @@
-# About Paper
+# [Paper Summary] Pre-training of Deep Bidirectional Transformers for Language Understanding(BERT)
 **Title**
 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 
 **Submission Date**
 24 May 2019
 
-# Key Contributions
+## Key Contributions
 1. Introduce a new fine-tuning approach, BERT(Bidirectional Encoder Representations from Transformers)
 2. Argued that major limitations of the previous standard language models are unidirectional, which limits the choice of architectures that can be used for pre-training
 3. Introduce a “masked language model” (MLM) which randomly mask some of the token from input, with objective predict original vocabulary id of masked word based on its context
 4. Use a “next sentence prediction” task that jointly pre-trains text-pair representations, which allow to pre-trained deep bidirectional transformer
 
-# Achievements
+## Achievements
 1. BERT advances the state of the art for eleven NLP tasks. The code and pre-trained models are available at https://github.com/google-research/bert
 
-# Introduction
+## Introduction
 There are 2 ways of pre-training, which including feature-based and fine-tuning based. Both of the pre-training will pre-train a language model using unsupervised learning. 
 
 And then, feature-based will construct an task-specific architecture which include the pre-training language modeling. In this case, it will freeze the parameter of language modeling, and supervised training dataset B(which is data for a specific task), and the convergence of parameter will happen on the other parameters.
 
 Fine-tuning introduces minimal task-specific parameters, and is trained on the down-stream tasks by simply fine-tuning the pre-trained parameter. Explaination in here is about using BERT as fine-tuning approach. Feature-based approach can find in original paper
 
-## Annotations
+### Annotations
+```
 L = Number of Layers(Transformer Block)
 A = Number of Self Attention
 
@@ -30,8 +31,9 @@ BERTLARGE (L=24, H=1024, A=16, Total Parameters=340M).
 
 Former = “Transformer encoder”
 Left-context-only transformer = Transformer decoder, since it can be used for text generation.
+```
 
-# Data
+## Data
 WordPiece embeddings (Wu et al. 2016) with a 30,000 token vocabulary. 
 1. The first token of every sequence is always a special classification token ([CLS]). 
 2. The final hidden state corresponding to this token is used as the aggregate sequence representation for classification tasks.
@@ -41,10 +43,10 @@ WordPiece embeddings (Wu et al. 2016) with a 30,000 token vocabulary.
 
 ![BERT input embeddings][bert_input_embeddings]
 
-## Pre-training data afterwards
+### Pre-training data afterwards
 The pre-training procedure largely follows the existing literature on language model pre-training. For the pre-training corpus we use the BooksCorpus (800M words) (Zhu et al., 2015) and English Wikipedia (2,500M words).
 
-# Approach
+## Approach
 There are two steps in BERT: pre-training and fine-tuning. 
 
 **Pre-training**
@@ -59,7 +61,8 @@ In order to train a deep bidirectional representation, we simply mask some perce
 - 10% became a random token
 - 10% replace back the original token
 
-# Next Sentence Prediction (NSP)
+
+## Example Use Case: Next Sentence Prediction (NSP)
 Many important downstream tasks such as Question Answering (QA) and Natural Language Inference (NLI) are based on understanding the relationship between two sentences, which is not directly captured by language modeling. In order to train a model that understands sentence relationships, author pre-train for a binarized next sentence prediction task that can be trivially generated from any monolingual corpus.
 
 |                                                        GPT                                                       |                                                  BERT                                                 |
@@ -72,7 +75,7 @@ Many important downstream tasks such as Question Answering (QA) and Natural Lang
 TODO: add wordpiece embedding
 
 
-# Experiments
+## Experiments
 1. MLM does converge marginally slower than a left-to-right model (which predicts every token), but the empirical improvements of the MLM model far outweigh the increased training cost.
 2. BERTBASE and BERTLARGE differs in network architecture size. BERTBASE and OpenAI GPT are nearly identical in model architecture outside of the attention masking.
 3. BERTBASE and BERTLARGE outperform all existing systems on GLUE tasks by a substantial margin, obtaining 4.4% and 6.7% respective average accuracy improvement over the state-of-the-art
