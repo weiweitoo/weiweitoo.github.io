@@ -1,4 +1,4 @@
-# [Paper Summary] Pre-training of Deep Bidirectional Transformers for Language Understanding(BERT)
+# [Paper Summary] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 **Title**
 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
 
